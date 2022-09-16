@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { Image, ImageSourcePropType } from "react-native";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const imageSource: ImageSourcePropType = [
+    {
+      scale: 1,
+      uri: "https://uploads-ssl.webflow.com/6059f22c9579dde676fed02c/605ca1319825050f10f25e20_benefit3-p-500.png",
+    },
+    {
+      scale: 2,
+      uri: "https://uploads-ssl.webflow.com/6059f22c9579dde676fed02c/605ca1319825050f10f25e20_benefit3.png",
+    },
+  ];
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  return <Image source={imageSource} />;
+}
